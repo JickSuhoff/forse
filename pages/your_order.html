@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&family=Russo+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/order.css">
+    <link rel="stylesheet" href="../styles/wrapper&card.css">
+    <link rel="stylesheet" href="../styles/btnNextStep.css">
+    <title>Your order</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <nav>
+                <a id='order-page' href="your_order.html">your order</a>
+                <a id='shipping-page' class="disabled" href="shipping_details.html">shipping details</a>
+                <a id='payment-page' class="disabled" href="payment_details.html">payment details</a>
+                <a id='confirmation-page' class="disabled" href="confirmation.html">confirmation</a>
+            </nav>
+            <div class="card order">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Jameson_Original.jpg/1024px-Jameson_Original.jpg"
+                    alt="img">
+                <div class="order_menu">
+                    <h3>Jameson</h3>
+                    <span>just 8$ per bottle!</span>
+                    <div class="price_counter">
+                        <div id="minus">
+                            <span></span>
+                        </div>
+                        <span></span>
+                        <div id="plus">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <p id="total_count"></p>
+                    <div class="next_step" id="order_next">
+                        <button>Next <br>Step</button>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

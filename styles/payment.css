@@ -1,0 +1,124 @@
+.payment {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 0 0 0;
+}
+.card_info {
+    display: flex;
+    justify-content: center;
+}
+.payment_card {
+    width: 300px;
+    height: 170px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 3%, rgba(9,9,117,1) 22%, rgba(9,9,121,1) 44%, rgba(8,37,140,1) 62%, rgba(0,212,255,1) 94%);    border-radius: 10px;
+    margin: 0 0px 0 0;
+    position: relative;
+}
+#card_number_output {
+    width: auto;
+    color: white;
+    font-family: sans-serif;
+    position: absolute;
+    margin: 0;
+    bottom: 60px;
+    left: 10px;
+}
+#user_name_output {
+    width: auto;
+    color: white;
+    font-family: sans-serif;
+    position: absolute;
+    margin: 0;
+    bottom: 15px;
+    left: 10px;
+    font-size: 18px;
+    font-weight: 200;
+}
+#is_valid_output {
+    width: auto;
+    color: white;
+    font-family: sans-serif;
+    position: absolute;
+    bottom: 15px;
+    margin: 0;
+    right: 20px;
+    font-size: 18px;
+    font-weight: 200;
+}
+.payment_card #bank_label {
+    width: 80px;
+    height: 40px;
+    margin: 10px 0 0 210px;
+}
+.chip {
+    position: absolute;
+    width: 45px;
+    height: 35px;
+    border-radius: 7px;
+    top: 50px;
+    left: 15px;
+}
+.payment_details .card_nameAndNmber {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+label {
+    font-size: 10px;
+    color: rgb(173, 169, 173);
+}
+input {
+    border: none;
+    width: auto;
+    outline: none;
+}
+span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(173, 169, 173);
+}
+.card_validity {
+    display: flex;
+    flex-direction: row;
+}
+.card_validity div {
+    display: flex;
+    flex-direction: column;
+}
+.card_validity div:first-child {
+    margin: 0 25px 0 0;
+}
+.card_validity div input {
+    width: 55px;
+    outline: none;
+}
+.card_validity div span {
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: rgb(173, 169, 173);
+}
+.steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 100px 0 0 0;
+    padding: 0 50px;
+}
+.steps > button {
+    background-color: rgb(82, 181, 226);
+    border: 1px solid rgb(82, 181, 226);
+    width: 150px;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Russo One', sans-serif;
+    cursor: pointer;
+}
+.disabled {
+    opacity: 0.5; 
+    pointer-events: none; 
+}

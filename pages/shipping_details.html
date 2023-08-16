@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&family=Russo+One&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles/wrapper&card.css">
+    <link rel="stylesheet" href="../styles/btnNextStep.css">
+    <link rel="stylesheet" href="../styles/btnPrevStep.css">
+    <link rel="stylesheet" href="../styles/shipping.css">
+
+    <title>Shipping details</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <nav>
+                <a id='order-page' href="your_order.html">your order</a>
+                <a id='shipping-page' href="shipping_details.html">shipping details</a>
+                <a id='payment-page' class="disabled" href="payment_details.html">payment details</a>
+                <a id='confirmation-page' class="disabled" href="confirmation.html">confirmation</a>
+            </nav>
+            <div class="card">
+                <div class="user_info">
+                    <form id="form">
+                        <label>Your city :</label>
+                        <input type="text" id="cityInput">
+
+                        <div id="autocompleteList"></div>
+
+                        <span></span>
+
+                        <label>Your address :</label>
+                        <input type="text" id="addressInput">
+                        <span></span>
+
+                        <label>Your phone number :</label>
+                        <input type="text" id="phoneInput" placeholder="+38 (0XX) XXX XXXX">
+                        <span></span>
+                        <!-- <p id="validationMessage"></p> -->
+                    </form>
+                </div>
+                <div class="steps">
+                    <div class="prev_step" id="shipping_prev">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <button>Previous <br>Step</button>
+                    </div>
+                    <div class="next_step" id='shipping_next'>
+                        <button>Next <br>Step</button>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

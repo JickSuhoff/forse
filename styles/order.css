@@ -1,0 +1,82 @@
+.order {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.order img {
+    width: 250px;
+    height: 350px;
+    border-radius: 40px;
+}
+.order_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.order_menu h3 {
+    font-size: 40px;
+    color: green;
+    margin: 40px 0 15px 0;
+}
+.price_counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 10px 0;
+    width: 140px;
+    height: 70px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+.price_counter div {
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.price_counter div:hover {
+    cursor: pointer;
+    background-color: cadetblue;
+}
+.price_counter div:first-child {
+    margin: 0 50px 0 0;
+}
+#plus span:first-child {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+    margin: 17px 0 0 8px;
+}
+#plus span:last-child {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+    rotate: 90deg;
+    margin: -2px 0 0 8px;
+}
+#minus span {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+    margin: 17px 0 0 8px;
+}
+.order_menu #total_count {
+    font-size: 22px;
+}
+.next_step {
+    margin: 0 0 0 120px;
+}
+.disabled {
+    opacity: 0.5; 
+    pointer-events: none; 
+}

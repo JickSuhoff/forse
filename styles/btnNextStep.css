@@ -1,0 +1,41 @@
+.next_step {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+}
+.next_step button {
+    background-color: white;
+    border: none;
+    color: rgb(82, 181, 226);
+    font-family: 'Russo One', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+}
+.next_step span:first-of-type {
+    display: block;
+    width: 25px;
+    height: 1px;
+    background-color: rgb(82, 181, 226);
+    margin: 0 0 0 10px;
+
+}
+.next_step span:nth-of-type(2) {
+    display: block;
+    width: 4px;
+    height: 1px;
+    background-color: rgb(82, 181, 226);
+    rotate: 45deg;
+    margin: -2px 0 0 -3px;
+}
+.next_step span:last-of-type {
+    display: block;
+    width: 4px;
+    height: 1px;
+    background-color: rgb(82, 181, 226);
+    rotate: -45deg;
+    margin: 2px 0 0 -4px;
+}
