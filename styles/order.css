@@ -5,8 +5,8 @@
     align-items: center;
 }
 .order img {
-    width: 250px;
-    height: 350px;
+    width: 300px;
+    height: auto;
     border-radius: 40px;
 }
 .order_menu {
@@ -30,6 +30,12 @@
     height: 70px;
     border: 2px solid black;
     border-radius: 50%;
+}
+#warning {
+    display: none;
+    font-size: 12px;
+    margin: 10px 0;
+    color: red;
 }
 .price_counter div {
     width: 40px;
@@ -70,8 +76,9 @@
     border-radius: 3px;
     margin: 17px 0 0 8px;
 }
-.order_menu #total_count {
+.order_menu p {
     font-size: 22px;
+    margin: 10px 0;
 }
 .next_step {
     margin: 0 0 0 120px;

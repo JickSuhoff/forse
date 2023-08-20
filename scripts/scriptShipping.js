@@ -7,6 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const paymentPageLink = document.getElementById('payment-page');
     const shipping_next = document.getElementById('shipping_next');
     const shipping_prev = document.getElementById('shipping_prev');
+    //errors warnings
+    const validationCityWarning = document.getElementById('validationCityWarning');
+    const validationAddressWarning = document.getElementById('validationAddressWarning');
+    const validationPhoneWarning = document.getElementById('validationPhoneWarning');
+    const citySpanUnderline = document.getElementById('underline1');
+    const addressSpanUnderline = document.getElementById('underline2');
+    const phoneSpanUnderline = document.getElementById('underline3');
 
     const savedCityInputValue = localStorage.getItem('cityInputValue');
     if (savedCityInputValue) {
@@ -55,34 +62,69 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e.target !== cityInput && e.target !== autocompleteList) {
             autocompleteList.innerHTML = '';
         }
+        updateLinkStates();
     });
 
     addressInput.addEventListener("input", function () {
         let inputText = addressInput.value;
         localStorage.setItem('addressInputValue', inputText);
+        updateLinkStates();
     });
 
     phoneInput.addEventListener("input", function () {
         let inputText = phoneInput.value;
         localStorage.setItem("phoneInputValue", inputText);
+        updateLinkStates();
     })
 
-    shipping_next.addEventListener('click', function () {
-
+    function updateLinkStates() {
         const cityInputValue = cityInput.value;
         const addressInputValue = addressInput.value;
         const phoneInputValue = phoneInput.value;
 
-        if (cityInputValue === '' || addressInputValue === '' || phoneInputValue === '') {
-            console.log(phoneInputValue.length)
-            shipping_next.disabled = true;
+        if (
+            cityInputValue === '' ||
+            addressInputValue === '' ||
+            phoneInputValue === '' ||
+            phoneInputValue.length !== 13
+        ) {
             paymentPageLink.classList.add("disabled");
-            alert("Please fill in all fields before proceeding.");
-
-        } else if (cityInputValue !== '' && addressInputValue !== '' && phoneInputValue !== '' && phoneInputValue.length === 13) {
-            console.log(phoneInputValue.length)
-            shipping_next.disabled = false;
+        } else if (
+            cityInputValue !== '' &&
+            addressInputValue !== '' &&
+            phoneInputValue !== '' &&
+            phoneInputValue.length === 13
+        ) {
             paymentPageLink.classList.remove("disabled");
+        }
+    };
+    updateLinkStates();
+
+    shipping_next.addEventListener('click', function () {
+        const cityInputValue = cityInput.value;
+        const addressInputValue = addressInput.value;
+        const phoneInputValue = phoneInput.value;
+
+        if (cityInputValue === '') {
+            shipping_next.disabled = true;
+            validationCityWarning.style.display = "block";
+            citySpanUnderline.style.backgroundColor = "red";
+        } else if (addressInputValue === '') {
+            shipping_next.disabled = true;
+            validationAddressWarning.style.display = "block";
+            addressSpanUnderline.style.backgroundColor = "red";
+        } else if (phoneInputValue === '' || phoneInputValue.length !== 13) {
+            shipping_next.disabled = true;
+            validationPhoneWarning.style.display = "block";
+            phoneSpanUnderline.style.backgroundColor = "red";
+        } else if (cityInputValue !== '') {
+            shipping_next.disabled = false;
+            window.location.href = paymentPageLink.href;
+        } else if (addressInputValue !== '') {
+            shipping_next.disabled = false;
+            window.location.href = paymentPageLink.href;
+        } else if (phoneInputValue !== '' && phoneInputValue.length === 13) {
+            shipping_next.disabled = false;
             window.location.href = paymentPageLink.href;
         }
     });

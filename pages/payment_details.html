@@ -22,7 +22,7 @@
                 <a id='order-page' href="your_order.html">your order</a>
                 <a id='shipping-page' href="shipping_details.html">shipping details</a>
                 <a id='payment-page' href="payment_details.html">payment details</a>
-                <a id='confirmation-page' class="disabled" href="confirmation.html">confirmation</a>
+                <a id='confirmation-page' href="confirmation.html">confirmation</a>
             </nav>
             <div class="card">
                 <div class="payment">
@@ -42,22 +42,26 @@
                         <div class="card_nameAndNmber">
                             <label>Name on Card</label>
                             <input type="text" id="user_name_input">
-                            <span></span>
+                            <span id="payUnderline1"></span>
+                            <p id="validationNameWarning">Enter your name</p>
 
                             <label>Card Number</label>
                             <input type="text" id="card_number_input">
-                            <span></span>
+                            <span id="payUnderline2"></span>
+                            <p id="validationCardNumberWarning">Enter your card-number</p>
                         </div>
                         <div class="card_validity">
                             <div>
                                 <label>Valid Through</label>
                                 <input type="text" id="date_is_valid_input" placeholder="MM / YY">
-                                <span></span>
+                                <span id="payUnderline3"></span>
+                                <p id="validationIsValidToWarning">Enter your <br>valid card date</p>
                             </div>
                             <div>
                                 <label>CVV</label>
                                 <input type="text" id="cvv_is_valid_input">
-                                <span></span>
+                                <span id="payUnderline4"></span>
+                                <p id="validationCVVWarning">Enter your CVV</p>
                             </div>
                         </div>
                     </div>
