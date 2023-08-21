@@ -1,12 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let count = localStorage.getItem('count');
+    const confirmation_paragraph = document.getElementById('confirmation_paragraph');
     const paymentPageLink = document.getElementById('payment-page');
-    const show_orderBtn = document.getElementById("show_order");
     const connfirmation_prev = document.getElementById('confimation_prev');
 
-    show_orderBtn.addEventListener('click', function () {
-        alert(`Congrats!!! You odrered ${count / 8} bottles of best weeskey!`)
-    })
+
+    let count = parseInt(localStorage.getItem("count")) || 0;
+    let bottles_count = count / 8;
+
+    if (bottles_count === 1) {
+        confirmation_paragraph.innerHTML = `You ordered ${bottles_count} bottle`
+    } else {
+        confirmation_paragraph.innerHTML = `You ordered ${bottles_count} bottles`
+    }
+
+
+
+
     connfirmation_prev.addEventListener('click', function () {
         window.location.href = paymentPageLink.href;
     })

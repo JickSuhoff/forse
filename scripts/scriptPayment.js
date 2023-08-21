@@ -9,6 +9,61 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //==========================================================>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -251,9 +306,7 @@ document.addEventListener("DOMContentLoaded", function () {
         validadePaymentInputs();
         if (!payment_next.disabled) {
             window.location.href = confirmationPageLink.href;
-        } //else {
-        // //     window.location.href = paymentPageLink.href;
-        // // }
+        } 
         console.log('click');
 
     })
@@ -262,7 +315,6 @@ document.addEventListener("DOMContentLoaded", function () {
     payment_prev.addEventListener('click', function () {
         window.location.href = shippingPageLink.href;
     })
-    validadePaymentInputs();
 });
 
 
